@@ -8,10 +8,14 @@
     function xify(str) {
         let strX = "";
         let count = 0;
+
         while (count < str.length) {
+
             strX += 'x';
             count++;
+
         }
+        
         return strX;
     }
 
@@ -21,9 +25,13 @@
 
     function xfiy(str) {
         let strX = "";
+
         for (let count = 0; count < str.length; count++) {
+
             strX += 'x';
+
         }
+
         return strX;
     }
 
@@ -38,9 +46,13 @@
 
         function yellingChars(str) {
             let strX = "";
+
             for (let count = 0; count < str.length; count++) {
+
                 strX += str[count] + '!';
+
             }
+
             return strX;
         }
 
@@ -55,9 +67,13 @@
 
     function indexedChars(str) {
         let strX = "";
+
         for (let count = 0; count < str.length; count++) {
+
             strX += count + str[count];
+
         }
+
         return strX;
     }
 
@@ -72,9 +88,13 @@
 
     function numberedChars(str) {
         let strX = "";
+
         for (let count = 0; count < str.length; count++) {
+
             strX += '(' + (count+1) + ')' + str[count];
+
         }
+
         return strX;
     }
 
@@ -87,12 +107,20 @@
 
     function exclaim(str) {
         let strX = "";
+
         for (let i = 0; i < str.length; i++) {
+
             if (str[i] === '?' || str[i] ===  '.') {
+
                 strX += '!'; 
-            } 
-            else strX += str[i];
+
+            } else {
+                
+                strX += str[i];
+
+            }
         }
+
         return strX;
     }
 
@@ -105,10 +133,14 @@
 
         function repeatIt(str, n) {
             var strX = "";
+
             while (n > 0) {
+
             strX += str;
             n--;
+
             }
+
             return strX;
         }
 
@@ -124,12 +156,16 @@
         let i = 0;
     
         while (i < 15) {
+
             strX += str[i];
             i++ 
+
         } 
         
         if (i = 15) {
+
             strX += '...';
+
         }
          
         return strX;
@@ -148,10 +184,14 @@
         for (let i = 0; i < str.length; i++) {
 
             if (str[i] === " ") {
+
                 strX += ".";
-                } 
-                
-            else strX += str[i];
+
+            } else {
+            
+            strX += str[i];
+
+            }
         } 
         
         if (i = str.length) {
@@ -194,7 +234,9 @@
         for (let i = 0;i < str.length; i++) {
             
             if (str.toLowerCase()[i] === 'a' || str.toLowerCase()[i] === 'e' || str.toLowerCase()[i] === 'i' || str.toLowerCase()[i] === 'o' || str.toLowerCase()[i] === 'u' ) {
+
                 strX += str[i];
+
             }
         }
         return strX;
@@ -216,10 +258,11 @@
         for (let i = 0;i < str.length; i++) {
             
             if (i % 2 === 0) {
-                strX += str.toLowerCase()[i];
-            } else
 
-            if (i % 2 === 1) {
+                strX += str.toLowerCase()[i];
+            
+            } else {
+
                 strX += str.toUpperCase()[i];
             }
         }
@@ -239,8 +282,11 @@
         for (let i = 0;i < str.length; i++) {
             
             if (i === 0 || str[i-1] === " ") {
+
                 strX += str.toUpperCase()[i];
+
             } else 
+
                 strX += str.toLowerCase()[i];
             
         }
@@ -261,11 +307,17 @@
         for (let i = 0;i < str.length; i++) {
             
             if (str[i] === " ") {
+
                 strX += "";
+
             } else
+
             if (str[i-1] === " ") {
+
                 strX += str.toUpperCase()[i];
+
             } else
+
                 strX += str.toLowerCase()[i];
         }
         return strX;
@@ -285,14 +337,19 @@
         for (let i = 0;i < str.length; i++) {
             
             if (count % 2 === 0 && str[i] !== " ") {
+
                 strX += str.toLowerCase()[i];
                 count++;
+
             } else
 
             if (count % 2 === 1 && str[i] !== " ") {
+
                 strX += str.toUpperCase()[i];
                 count++;
+
             } else
+
             strX += str[i];
         }
         return strX;
